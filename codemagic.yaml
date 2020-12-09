@@ -1,0 +1,11 @@
+# Check out https://docs.codemagic.io/getting-started/building-a-native-android-app/ for more information
+
+workflows:
+    main:
+        name: Main
+        scripts:
+            - name: Build Demo app and library file
+              script: ./gradlew clean build
+        artifacts:
+            - app/build/outputs/**/*.apk
+            - app/build/outputs/**/*.aar
